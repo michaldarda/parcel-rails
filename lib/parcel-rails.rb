@@ -1,7 +1,7 @@
 require "parcel/rails/version"
 
-module Parcel
+module Parce
   module Rails
-    # Your code goes here...
+
   end
 end

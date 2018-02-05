@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    parcel-rails (0.1.0)
+    parcel-rails (0.1.0.pre)
 
 GEM
   remote: https://rubygems.org/

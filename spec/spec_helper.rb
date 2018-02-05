@@ -1,5 +1,5 @@
 require "bundler/setup"
-require "parcel/rails"
+require "parcel-rails"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
