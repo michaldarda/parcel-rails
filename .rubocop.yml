@@ -1,0 +1,7 @@
+Metrics/LineLength:
+  Exclude:
+    - 'parcel-rails.gemspec'
+
+Naming/FileName:
+  Exclude:
+    - 'lib/parcel-rails.rb'
