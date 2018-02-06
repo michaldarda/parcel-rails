@@ -1,8 +1,7 @@
-# Parcel::Rails
+# parcel-rails
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/parcel/rails`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Gem integrates [parcel](https://parceljs.org/) JS module bundler into your Rails application. It is inspired by gems such as
+[breakfast](https://github.com/devlocker/breakfast) or [webpacker](https://github.com/rails/webpacker).
 
 ## Installation
 
@@ -12,17 +11,41 @@ Add this line to your application's Gemfile:
 gem 'parcel-rails'
 ```
 
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install parcel-rails
-
 ## Usage
 
-TODO: Write usage instructions here
+Run
+
+    $ bin/rails parcel:install
+
+### Development
+
+Currently `parcel` is not integrated with `rails s` so you need a process manager like [foreman]() to run both `rails s` and `parcel`.
+
+Create `Procfile.dev`, with the following content:
+
+```
+web: bin/rails s
+parcel: bin/rails parcel:server
+```
+
+### Production
+
+Gem hooks up to the assets:precompile, so no special setup is required.
+
+
+### View helpers
+
+`parcel-rails` provides set of helpers that allows you to include bundled
+modules in your application
+
+	javascript_parcel_tag 'application'
+    
+    stylesheet_parcel_tag 'application'
+    
+### Configuration
+
+	config.parcel.paths = %w(app/javascript/)
+	config.parcel.entry_points = %w(application.js)
 
 ## Development
 
@@ -41,3 +64,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 ## Code of Conduct
 
 Everyone interacting in the Parcel::Rails project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/parcel-rails/blob/master/CODE_OF_CONDUCT.md).
+
