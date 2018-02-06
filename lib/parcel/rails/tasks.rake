@@ -1,10 +1,11 @@
 # frozen_string_literal: true
 
+require_relative 'commands/compile'
+
 namespace :parcel do
   namespace :assets do
     task :precompile do
-      parcel_config = Rails.config.parcel
-      `parcel #{parcel_config.entry_points.join(' ')} -d public/parcels`
+      Parcel::Rails::Commands::Compile.new(Rails.config.parcel.assets).()
     end
   end
 end

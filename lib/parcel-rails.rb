@@ -10,3 +10,4 @@ end
 
 require 'parcel/rails/version'
 require 'parcel/rails/commands/compile'
+require 'parcel/rails/railtie' if defined?(Rails)
