@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 namespace :parcel do
   namespace :assets do
     task :precompile do

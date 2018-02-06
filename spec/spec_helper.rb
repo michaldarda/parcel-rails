@@ -14,3 +14,7 @@ RSpec.configure do |config|
     c.syntax = :expect
   end
 end
+
+FIXTURES_DIR = Pathname.new('spec/fixtures')
+PUBLIC_PARCELS_DIR = Pathname.new('public/parcels')
+CACHE_DIR = '.cache'
