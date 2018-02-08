@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
-require_relative 'parcel/rails/commands/compile'
+require 'parcel/rails/version'
+require 'parcel/rails/runner'
 
 module Parcel
   # Parceljs integration with Rails
@@ -19,22 +20,15 @@ module Parcel
           namespace :parcel do
             desc 'Compiles assets using parcel bundler'
             task :compile do
-              config = ::Rails.application.config.parcel
-              assets = Parcel::Rails::Commands::Lookup.new(paths: config.paths, entry_points: config.entry_points).()
-              Parcel::Rails::Commands::Compile.new(assets: assets, destination: config.destination).()
+              Parcel::Rails::Runner.from_config.compile
             end
           end
         end
 
         config.parcel = ActiveSupport::OrderedOptions.new
-        config.parcel.paths = %w(app/javascript)
-        config.parcel.entry_points = %w(application.js)
-        config.parcel.destination = %w(public/)
+        config.parcel.entry_points = %w(app/javascript/application.js)
+        config.parcel.destination = 'public/parcels'
       end
     end
   end
 end
-
-require 'parcel/rails/version'
-require 'parcel/rails/commands/lookup'
-require 'parcel/rails/commands/compile'
