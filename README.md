@@ -8,7 +8,7 @@ Gem integrates [parcel](https://parceljs.org/) JS module bundler into your Rails
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'parcel-rails'
+    gem 'parcel-rails'
 ```
 
 ## Usage
@@ -25,7 +25,7 @@ Create `Procfile.dev`, with the following content:
 
 ```
 web: bin/rails s
-parcel: bin/rails parcel:server
+parcel: bin/rails parcel:serve
 ```
 
 ### Production
@@ -38,14 +38,14 @@ Gem hooks up to the assets:precompile, so no special setup is required.
 `parcel-rails` provides set of helpers that allows you to include bundled
 modules in your application
 
-	javascript_parcel_tag 'application'
-    
+	  javascript_parcel_tag 'application'
+
     stylesheet_parcel_tag 'application'
-    
+
 ### Configuration
 
-	config.parcel.paths = %w(app/javascript/)
-	config.parcel.entry_points = %w(application.js)
+	config.parcel.entry_points = %w(app/javascript/application.js)
+	config.parcel.destination = 'public/parcels'
 
 ## Development
 
