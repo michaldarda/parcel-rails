@@ -15,8 +15,10 @@ RSpec.describe Parcel::Rails::Runner do
         Rails = OpenStruct.new({
           application: OpenStruct.new({
             config: OpenStruct.new({
-              entry_points: asset,
-              destination: PUBLIC_PARCELS_DIR
+              parcel: OpenStruct.new({
+                entry_points: asset,
+                destination: PUBLIC_PARCELS_DIR
+              })
             })
           })
         })

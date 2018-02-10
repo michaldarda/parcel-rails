@@ -7,7 +7,7 @@ module Parcel
       end
 
       def self.from_config
-        to_args(::Rails.application.config)
+        to_args(::Rails.application.config.parcel)
       end
 
       def self.to_args(config)
