@@ -8,7 +8,7 @@ Gem integrates [parcel](https://parceljs.org/) JS module bundler into your Rails
 Add this line to your application's Gemfile:
 
 ```ruby
-    gem 'parcel-rails'
+gem 'parcel-rails'
 ```
 
 ## Usage
@@ -38,7 +38,7 @@ Gem hooks up to the assets:precompile, so no special setup is required.
 `parcel-rails` provides set of helpers that allows you to include bundled
 modules in your application
 
-	  javascript_parcel_tag 'application'
+	javascript_parcel_tag 'application'
 
     stylesheet_parcel_tag 'application'
 
