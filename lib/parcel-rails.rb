@@ -22,19 +22,7 @@ module Parcel
         end
 
         rake_tasks do
-          namespace :parcel do
-            desc 'Compiles assets using parcel bundler'
-            task :compile do
-              Parcel::Rails::Runner.from_config.compile
-            end
-          end
-
-          namespace :parcel do
-            desc 'Compiles assets using parcel bundler'
-            task :serve do
-              Parcel::Rails::Runner.from_config.serve
-            end
-          end
+          load 'parcel/rails/tasks.rake'
         end
 
         config.parcel = ActiveSupport::OrderedOptions.new
