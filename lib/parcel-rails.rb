@@ -23,6 +23,13 @@ module Parcel
               Parcel::Rails::Runner.from_config.compile
             end
           end
+
+          namespace :parcel do
+            desc 'Compiles assets using parcel bundler'
+            task :serve do
+              Parcel::Rails::Runner.from_config.serve
+            end
+          end
         end
 
         config.parcel = ActiveSupport::OrderedOptions.new

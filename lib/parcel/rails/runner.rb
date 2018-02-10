@@ -22,14 +22,14 @@ module Parcel
         parcel_commmand(:build)
       end
 
-      def watch
+      def serve
         parcel_commmand
       end
 
       private
 
       def parcel_commmand(cmd = '')
-        output = `parcel #{cmd} #{@args.join(' ')}`
+        output = exec("parcel #{cmd} #{@args.join(' ')}")
         puts output
       end
     end
