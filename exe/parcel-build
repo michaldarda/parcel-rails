@@ -4,5 +4,5 @@ ENV["RAILS_ENV"] ||= ENV["RACK_ENV"] || "development"
 ENV["NODE_ENV"] ||= ENV["RAILS_ENV"]
 
 require "parcel-rails"
-require "parcel-rails/runner"
-Parcel::Rails::Runner.build(ARGV)
+Parcel::Rails::Runner.from_command_line(ARGV).build
+
