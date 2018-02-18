@@ -8,8 +8,8 @@ require 'parcel/rails/version'
 Gem::Specification.new do |spec|
   spec.name          = 'parcel-rails'
   spec.version       = Parcel::Rails::VERSION
-  spec.authors       = ['Michał Darda']
-  spec.email         = ['michaldarda@gmail.com']
+  spec.authors       = ['Michał Darda', 'Ignacy Moryc']
+  spec.email         = ['michaldarda@gmail.com', 'imoryc@gmail.com']
 
   spec.summary       = 'Rails integration of parceljs bundler'
   spec.description   = 'Rails integration of parceljs bundler'
