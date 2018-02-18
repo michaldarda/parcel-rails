@@ -15,7 +15,7 @@ gem 'parcel-rails'
 
 Run
 
-    $ bin/rails parcel:install
+    $ bin/rails g parcel
 
 ### Development
 
@@ -30,18 +30,19 @@ parcel: bin/rails parcel:serve
 
 ### Production
 
-Gem hooks up to the assets:precompile, so no special setup is required.
+Gem hooks up to the assets:precompile and assets:clobber, so no special setup is required.
 
 
 ### Including in view
 
-`parcel-rails` provides set of helpers that allows you to include bundled
-modules in your application
+Use Rails generic helpers to include assets in your views
 
     javascript_include_tag '/parcels/application'
     stylesheet_include_tag '/parcels/application'
 
 ### Configuration
+
+After running generator, configuration can be found in config/initializers/parcel.rb.
 
 	config.parcel.entry_points = %w(app/javascript/application.js)
 	config.parcel.destination = 'public/parcels'
