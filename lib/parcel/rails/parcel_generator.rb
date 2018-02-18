@@ -9,4 +9,8 @@ class ParcelGenerator < Rails::Generators::Base
 end}
     end
   end
+
+  def add_parcel_bundler
+    `yarn add parcel-bundler`
+  end
 end
