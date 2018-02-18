@@ -14,9 +14,7 @@ Add this line to your application's Gemfile:
 gem 'parcel-rails'
 ```
 
-## Usage
-
-Run
+Then run
 
     $ bin/rails g parcel
 
@@ -33,10 +31,10 @@ parcel: bin/rails parcel:serve
 
 ### Production
 
-Gem hooks up to the assets:precompile and assets:clobber, so no special setup is required.
+Gem hooks up to the `assets:precompile` and `assets:clobber`, so no special setup is required.
 
 
-### Including in view
+### Including in views
 
 Use Rails generic helpers to include assets in your views
 
@@ -66,5 +64,5 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the Parcel::Rails project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/parcel-rails/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the *parcel-rails* project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/parcel-rails/blob/master/CODE_OF_CONDUCT.md).
 
