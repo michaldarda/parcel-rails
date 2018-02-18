@@ -2,6 +2,7 @@
 
 require 'parcel/rails/version'
 require 'parcel/rails/runner'
+require 'parcel/rails/parcel_generator'
 
 module Parcel
   # Parceljs integration with Rails
