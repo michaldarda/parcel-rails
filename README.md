@@ -33,14 +33,13 @@ parcel: bin/rails parcel:serve
 Gem hooks up to the assets:precompile, so no special setup is required.
 
 
-### View helpers
+### Including in view
 
 `parcel-rails` provides set of helpers that allows you to include bundled
 modules in your application
 
-	javascript_parcel_tag 'application'
-
-    stylesheet_parcel_tag 'application'
+    javascript_include_tag '/parcels/application'
+    stylesheet_include_tag '/parcels/application'
 
 ### Configuration
 
@@ -55,7 +54,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/parcel-rails. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/michaldarda/parcel-rails. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 

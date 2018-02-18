@@ -1,1 +1,3 @@
-alert('something')
+setTimeout(() => {
+  alert('something')
+}, 3000)

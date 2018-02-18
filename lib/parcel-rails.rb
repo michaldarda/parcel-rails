@@ -2,7 +2,6 @@
 
 require 'parcel/rails/version'
 require 'parcel/rails/runner'
-require 'parcel/rails/view_helpers'
 
 module Parcel
   # Parceljs integration with Rails
@@ -16,10 +15,6 @@ module Parcel
 
       class Railtie < ::Rails::Railtie
         railtie_name :parcel
-
-        initializer 'parcel.view_helpers' do
-          ActionView::Base.send :include, ViewHelpers
-        end
 
         rake_tasks do
           load 'parcel/rails/tasks.rake'
