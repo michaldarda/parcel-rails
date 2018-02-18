@@ -10,8 +10,20 @@ namespace :parcel do
   task :serve do
     Parcel::Rails::Runner.from_config.serve
   end
+
+  desc 'Removes compiled assets'
+  task :clobber do
+    command = "rm -rf #{::Rails.application.config.parcel.destination}"
+    logger = Logger.new(STDOUT)
+    logger.info(command)
+    exec(command)
+  end
 end
 
 Rake::Task['assets:precompile'].enhance do
   Rake::Task['parcel:compile'].invoke
+end
+
+Rake::Task['assets:clobber'].enhance do
+  Rake::Task['parcel:clobber'].invoke
 end
