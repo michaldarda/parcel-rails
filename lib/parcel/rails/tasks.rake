@@ -11,3 +11,7 @@ namespace :parcel do
     Parcel::Rails::Runner.from_config.serve
   end
 end
+
+Rake::Task['assets:precompile'].enhance do
+  Rake::Task['parcel:compile'].invoke
+end
