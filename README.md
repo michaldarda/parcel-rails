@@ -29,10 +29,15 @@ web: bin/rails s
 parcel: bin/rails parcel:serve
 ```
 
+Then run `foreman start`
+
 ### Production
 
 Gem hooks up to the `assets:precompile` and `assets:clobber`, so no special setup is required.
 
+You can start parcel's compilation process manually by running
+
+    rake parcel:compile
 
 ### Including in views
 
