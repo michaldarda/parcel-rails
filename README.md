@@ -1,5 +1,8 @@
 # parcel-rails
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/4b0a3f36a6b1970a88e5/maintainability)](https://codeclimate.com/github/michaldarda/parcel-rails/maintainability)
+[![Build Status](https://travis-ci.org/michaldarda/parcel-rails.svg?branch=master)](https://travis-ci.org/michaldarda/parcel-rails)
+
 Gem integrates [parcel](https://parceljs.org/) JS module bundler into your Rails application. It is inspired by gems such as
 [breakfast](https://github.com/devlocker/breakfast) or [webpacker](https://github.com/rails/webpacker).
 
