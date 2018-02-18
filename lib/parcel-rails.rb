@@ -22,7 +22,7 @@ module Parcel
         end
 
         config.parcel = ActiveSupport::OrderedOptions.new
-        config.parcel.entry_points = %w(app/javascript/application.js)
+        config.parcel.entry_points = %w[app/javascript/application.js]
         config.parcel.destination = 'public/parcels'
       end
     end

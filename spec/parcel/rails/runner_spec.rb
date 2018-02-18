@@ -12,16 +12,16 @@ RSpec.describe Parcel::Rails::Runner do
     describe 'compile' do
       it 'compiles all given assets' do
         asset = [FIXTURES_DIR.join('simple_js_project', 'index.js')]
-        Rails = OpenStruct.new({
-          application: OpenStruct.new({
-            config: OpenStruct.new({
-              parcel: OpenStruct.new({
+        Rails = OpenStruct.new(
+          application: OpenStruct.new(
+            config: OpenStruct.new(
+              parcel: OpenStruct.new(
                 entry_points: asset,
                 destination: PUBLIC_PARCELS_DIR
-              })
-            })
-          })
-        })
+              )
+            )
+          )
+        )
         Parcel::Rails::Runner.from_config.compile
         expect(File.exist?(PUBLIC_PARCELS_DIR.join('index.js'))).to eq true
       end
