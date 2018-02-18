@@ -29,8 +29,8 @@ module Parcel
       private
 
       def parcel_commmand(cmd = '')
-        output = exec("parcel #{cmd} #{@args.join(' ')}")
-        puts output
+        command = "yarn run parcel -- #{cmd} #{@args.join(' ')}"
+        output = exec(command)
       end
     end
   end
