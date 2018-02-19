@@ -1,5 +1,6 @@
 # parcel-rails
 
+[![Gem Version](https://badge.fury.io/rb/parcel-rails.svg)](https://badge.fury.io/rb/parcel-rails)
 [![Maintainability](https://api.codeclimate.com/v1/badges/4b0a3f36a6b1970a88e5/maintainability)](https://codeclimate.com/github/michaldarda/parcel-rails/maintainability)
 [![Build Status](https://travis-ci.org/michaldarda/parcel-rails.svg?branch=master)](https://travis-ci.org/michaldarda/parcel-rails)
 
