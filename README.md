@@ -54,6 +54,10 @@ After running generator, configuration can be found in config/initializers/parce
 	config.parcel.entry_points = %w(app/javascript/application.js)
 	config.parcel.destination = 'public/parcels'
 
+#### Warning
+
+Currently only single entry point is supported, it is limitation coming from Parcel itself and not the gem.
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
