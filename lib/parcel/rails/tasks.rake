@@ -2,17 +2,17 @@
 
 namespace :parcel do
   desc 'Compiles assets using parcel bundler'
-  task :compile do
+  task compile: :environment do
     Parcel::Rails::Runner.from_config.compile
   end
 
   desc 'Compiles assets using parcel bundler'
-  task :serve do
+  task serve: :environment do
     Parcel::Rails::Runner.from_config.serve
   end
 
   desc 'Removes compiled assets'
-  task :clobber do
+  task clobber: :environment do
     command = "rm -rf #{::Rails.application.config.parcel.destination}"
     logger = Logger.new(STDOUT)
     logger.info(command)
