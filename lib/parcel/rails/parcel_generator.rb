@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class ParcelGenerator < Rails::Generators::Base
+class ParcelGenerator < ::Rails::Generators::Base
   desc 'Generate parce-rails initializer'
 
   def create_initializer_file
