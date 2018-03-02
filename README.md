@@ -30,7 +30,7 @@ web: bin/rails s
 parcel: bin/rails parcel:serve
 ```
 
-Then run `foreman start`
+Then run `foreman start -f Procfile.dev`
 
 ### Production
 
