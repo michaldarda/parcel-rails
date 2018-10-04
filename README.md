@@ -45,7 +45,7 @@ You can start parcel's compilation process manually by running
 Use Rails generic helpers to include assets in your views
 
     javascript_include_tag '/parcels/application'
-    stylesheet_include_tag '/parcels/application'
+    stylesheet_link_tag '/parcels/application'
 
 ### Configuration
 
